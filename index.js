@@ -1,9 +1,20 @@
 /**
+ * Index
  * @format
  */
-
+import 'react-native-gesture-handler';
+import React from 'react';
 import {AppRegistry} from 'react-native';
-import App from './App';
+import {Provider as PaperProvider} from 'react-native-paper';
+import AppContainer from './src/navigation/AppContainer';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => App);
+export default function Index() {
+    return (
+        <PaperProvider>
+            <AppContainer />
+        </PaperProvider>
+    );
+}
+
+AppRegistry.registerComponent(appName, () => Index);

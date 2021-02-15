@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* OrenjiScootersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* OrenjiScootersTests.m */; };
+		0ED1088DB4E997E938CF373E /* libPods-OrenjiScooters-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6CB764D0E9F59C37E90636 /* libPods-OrenjiScooters-tvOSTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -15,11 +16,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* OrenjiScootersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* OrenjiScootersTests.m */; };
+		5B44D6ACCA5DAF10B165E0A4 /* libPods-OrenjiScooters-OrenjiScootersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CE01B0A052F3FC26882965 /* libPods-OrenjiScooters-OrenjiScootersTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		9B6C44521864179B92D51BF7 /* libPods-OrenjiScooters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C3D731C08634DB9D3DBF88 /* libPods-OrenjiScooters.a */; };
-		AEEC0047380EFFACC9AD50FB /* libPods-OrenjiScooters-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC9B9696B2229F5E41C367B /* libPods-OrenjiScooters-tvOSTests.a */; };
-		C2DC086968E38DC291A08D31 /* libPods-OrenjiScooters-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C5701A8F053886601FF307E /* libPods-OrenjiScooters-tvOS.a */; };
-		F873EC9C71BB3BC640CD93ED /* libPods-OrenjiScooters-OrenjiScootersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCCA544031B736CF043B685A /* libPods-OrenjiScooters-OrenjiScootersTests.a */; };
+		E496A014CB675A32D95DC66A /* libPods-OrenjiScooters-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E5CDF4051FF958964F8F11 /* libPods-OrenjiScooters-tvOS.a */; };
+		FDA28A1D9D4F0A7A3190AFB3 /* libPods-OrenjiScooters.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AC4400642E61809F42A24E8 /* libPods-OrenjiScooters.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,29 +44,29 @@
 		00E356EE1AD99517003FC87E /* OrenjiScootersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrenjiScootersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* OrenjiScootersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrenjiScootersTests.m; sourceTree = "<group>"; };
+		0AC4400642E61809F42A24E8 /* libPods-OrenjiScooters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* OrenjiScooters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrenjiScooters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = OrenjiScooters/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = OrenjiScooters/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = OrenjiScooters/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = OrenjiScooters/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = OrenjiScooters/main.m; sourceTree = "<group>"; };
-		1C711BBE6ED2A8C79F2605CB /* Pods-OrenjiScooters-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOSTests/Pods-OrenjiScooters-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		24836A3D763381335633793C /* Pods-OrenjiScooters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters/Pods-OrenjiScooters.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* OrenjiScooters-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OrenjiScooters-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* OrenjiScooters-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OrenjiScooters-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		308625270A8D872EDEFC8CCA /* Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig"; sourceTree = "<group>"; };
-		38E3771AAE10C6BEC5937464 /* Pods-OrenjiScooters-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOS.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		5C5701A8F053886601FF307E /* libPods-OrenjiScooters-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63B115EE3D1FEC197102519E /* Pods-OrenjiScooters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters/Pods-OrenjiScooters.debug.xcconfig"; sourceTree = "<group>"; };
+		644786D9BFB070B518836E2A /* Pods-OrenjiScooters-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOSTests/Pods-OrenjiScooters-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = OrenjiScooters/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8356362E70995845C845EDE2 /* Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig"; sourceTree = "<group>"; };
-		CDD542AC2AB99F062B803CD5 /* Pods-OrenjiScooters-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		D3C3D731C08634DB9D3DBF88 /* libPods-OrenjiScooters.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCC9B9696B2229F5E41C367B /* libPods-OrenjiScooters-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8632A3620B4D6B2D7A5ED728 /* Pods-OrenjiScooters-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOSTests/Pods-OrenjiScooters-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A766FE66881E23E5C46D2044 /* Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA528CF851F4D9C4AEB9F865 /* Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig"; sourceTree = "<group>"; };
+		C0CE01B0A052F3FC26882965 /* libPods-OrenjiScooters-OrenjiScootersTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters-OrenjiScootersTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E5CDF4051FF958964F8F11 /* libPods-OrenjiScooters-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4090607F1248E90AEE9E873 /* Pods-OrenjiScooters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters/Pods-OrenjiScooters.debug.xcconfig"; sourceTree = "<group>"; };
+		D8009EA5302DA7A15CAEB1C7 /* Pods-OrenjiScooters-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		DC95D44B0A7633806FA84534 /* Pods-OrenjiScooters-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOS.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		ED33B51432B8EC32DD8ED56F /* Pods-OrenjiScooters-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters-tvOSTests/Pods-OrenjiScooters-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FCCA544031B736CF043B685A /* libPods-OrenjiScooters-OrenjiScootersTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters-OrenjiScootersTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05BCE4E37953D410BB6F3CE /* Pods-OrenjiScooters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrenjiScooters.release.xcconfig"; path = "Target Support Files/Pods-OrenjiScooters/Pods-OrenjiScooters.release.xcconfig"; sourceTree = "<group>"; };
+		FE6CB764D0E9F59C37E90636 /* libPods-OrenjiScooters-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OrenjiScooters-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F873EC9C71BB3BC640CD93ED /* libPods-OrenjiScooters-OrenjiScootersTests.a in Frameworks */,
+				5B44D6ACCA5DAF10B165E0A4 /* libPods-OrenjiScooters-OrenjiScootersTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B6C44521864179B92D51BF7 /* libPods-OrenjiScooters.a in Frameworks */,
+				FDA28A1D9D4F0A7A3190AFB3 /* libPods-OrenjiScooters.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2DC086968E38DC291A08D31 /* libPods-OrenjiScooters-tvOS.a in Frameworks */,
+				E496A014CB675A32D95DC66A /* libPods-OrenjiScooters-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEEC0047380EFFACC9AD50FB /* libPods-OrenjiScooters-tvOSTests.a in Frameworks */,
+				0ED1088DB4E997E938CF373E /* libPods-OrenjiScooters-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,10 +141,10 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				D3C3D731C08634DB9D3DBF88 /* libPods-OrenjiScooters.a */,
-				FCCA544031B736CF043B685A /* libPods-OrenjiScooters-OrenjiScootersTests.a */,
-				5C5701A8F053886601FF307E /* libPods-OrenjiScooters-tvOS.a */,
-				DCC9B9696B2229F5E41C367B /* libPods-OrenjiScooters-tvOSTests.a */,
+				0AC4400642E61809F42A24E8 /* libPods-OrenjiScooters.a */,
+				C0CE01B0A052F3FC26882965 /* libPods-OrenjiScooters-OrenjiScootersTests.a */,
+				C6E5CDF4051FF958964F8F11 /* libPods-OrenjiScooters-tvOS.a */,
+				FE6CB764D0E9F59C37E90636 /* libPods-OrenjiScooters-tvOSTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 				00E356EF1AD99517003FC87E /* OrenjiScootersTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				8768E8A2F718FC4C840953D8 /* Pods */,
+				CD45A34B4F45F3A05F4ACBF8 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -182,17 +182,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8768E8A2F718FC4C840953D8 /* Pods */ = {
+		CD45A34B4F45F3A05F4ACBF8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				63B115EE3D1FEC197102519E /* Pods-OrenjiScooters.debug.xcconfig */,
-				24836A3D763381335633793C /* Pods-OrenjiScooters.release.xcconfig */,
-				8356362E70995845C845EDE2 /* Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig */,
-				308625270A8D872EDEFC8CCA /* Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig */,
-				CDD542AC2AB99F062B803CD5 /* Pods-OrenjiScooters-tvOS.debug.xcconfig */,
-				38E3771AAE10C6BEC5937464 /* Pods-OrenjiScooters-tvOS.release.xcconfig */,
-				ED33B51432B8EC32DD8ED56F /* Pods-OrenjiScooters-tvOSTests.debug.xcconfig */,
-				1C711BBE6ED2A8C79F2605CB /* Pods-OrenjiScooters-tvOSTests.release.xcconfig */,
+				D4090607F1248E90AEE9E873 /* Pods-OrenjiScooters.debug.xcconfig */,
+				F05BCE4E37953D410BB6F3CE /* Pods-OrenjiScooters.release.xcconfig */,
+				A766FE66881E23E5C46D2044 /* Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig */,
+				AA528CF851F4D9C4AEB9F865 /* Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig */,
+				D8009EA5302DA7A15CAEB1C7 /* Pods-OrenjiScooters-tvOS.debug.xcconfig */,
+				DC95D44B0A7633806FA84534 /* Pods-OrenjiScooters-tvOS.release.xcconfig */,
+				8632A3620B4D6B2D7A5ED728 /* Pods-OrenjiScooters-tvOSTests.debug.xcconfig */,
+				644786D9BFB070B518836E2A /* Pods-OrenjiScooters-tvOSTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -205,11 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "OrenjiScootersTests" */;
 			buildPhases = (
-				C8B935207F9A30D16E0F3247 /* [CP] Check Pods Manifest.lock */,
+				FD66D1F82A063CD6DE1C42DF /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				E5857D88560491374217DD56 /* [CP] Copy Pods Resources */,
+				11D400359E7D1D9E7CCBE9D3 /* [CP] Copy Pods Resources */,
+				99FF7D9DE55931232B7F0DF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,13 +226,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "OrenjiScooters" */;
 			buildPhases = (
-				4407A0981539AE7A58F84B64 /* [CP] Check Pods Manifest.lock */,
+				1F1CCB9F0C4D4E83F5CC16BF /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				ED8EE83E34ADD8F66AEE6796 /* [CP] Copy Pods Resources */,
+				DB7C751DD6E3DDD41F5EEE02 /* [CP] Copy Pods Resources */,
+				5DB77C9A15EFBC592468D925 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -246,12 +248,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "OrenjiScooters-tvOS" */;
 			buildPhases = (
-				84438D66358725D5E943317E /* [CP] Check Pods Manifest.lock */,
+				B672840DDF1DCC542AAA2796 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
 				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+				AD6C783950F02D3B471B0CC2 /* [CP] Embed Pods Frameworks */,
+				1967EAE45949F65CE07910CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,7 +270,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "OrenjiScooters-tvOSTests" */;
 			buildPhases = (
-				D5B0A49EEBD15961246914D1 /* [CP] Check Pods Manifest.lock */,
+				85419D614205B8D2E31AF5F3 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -377,21 +381,79 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
+		11D400359E7D1D9E7CCBE9D3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests-resources.sh",
+				"${PODS_ROOT}/MapboxMobileEvents/MapboxMobileEvents/Resources/logger.html",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core.common-CoreModulesHeaders/AccessibilityResources.bundle",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 			);
-			name = "Bundle React Native Code And Images";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/logger.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		4407A0981539AE7A58F84B64 /* [CP] Check Pods Manifest.lock */ = {
+		1967EAE45949F65CE07910CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS-resources.sh",
+				"${PODS_ROOT}/MapboxMobileEvents/MapboxMobileEvents/Resources/logger.html",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core.common/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/logger.html",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1F1CCB9F0C4D4E83F5CC16BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,51 +475,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		84438D66358725D5E943317E /* [CP] Check Pods Manifest.lock */ = {
+		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "Bundle React Native Code And Images";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OrenjiScooters-tvOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		C8B935207F9A30D16E0F3247 /* [CP] Check Pods Manifest.lock */ = {
+		5DB77C9A15EFBC592468D925 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters/Pods-OrenjiScooters-frameworks.sh",
+				"${PODS_ROOT}/@react-native-mapbox-gl-mapbox-static/dynamic/MapboxMobileEvents.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OrenjiScooters-OrenjiScootersTests-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxMobileEvents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters/Pods-OrenjiScooters-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5B0A49EEBD15961246914D1 /* [CP] Check Pods Manifest.lock */ = {
+		85419D614205B8D2E31AF5F3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -479,36 +531,114 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E5857D88560491374217DD56 /* [CP] Copy Pods Resources */ = {
+		99FF7D9DE55931232B7F0DF7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests-frameworks.sh",
+				"${PODS_ROOT}/@react-native-mapbox-gl-mapbox-static/dynamic/MapboxMobileEvents.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxMobileEvents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-OrenjiScootersTests/Pods-OrenjiScooters-OrenjiScootersTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ED8EE83E34ADD8F66AEE6796 /* [CP] Copy Pods Resources */ = {
+		AD6C783950F02D3B471B0CC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS-frameworks.sh",
+				"${PODS_ROOT}/@react-native-mapbox-gl-mapbox-static/dynamic/MapboxMobileEvents.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MapboxMobileEvents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters-tvOS/Pods-OrenjiScooters-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B672840DDF1DCC542AAA2796 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrenjiScooters-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB7C751DD6E3DDD41F5EEE02 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-OrenjiScooters/Pods-OrenjiScooters-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+				"${PODS_ROOT}/MapboxMobileEvents/MapboxMobileEvents/Resources/logger.html",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core.common-CoreModulesHeaders/AccessibilityResources.bundle",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/logger.html",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AntDesign.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Entypo.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EvilIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Feather.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Brands.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Regular.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FontAwesome5_Solid.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Fontisto.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Foundation.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Ionicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialCommunityIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MaterialIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Octicons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SimpleLineIcons.ttf",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Zocial.ttf",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -551,6 +681,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD66D1F82A063CD6DE1C42DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OrenjiScooters-OrenjiScootersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -608,7 +760,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8356362E70995845C845EDE2 /* Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig */;
+			baseConfigurationReference = A766FE66881E23E5C46D2044 /* Pods-OrenjiScooters-OrenjiScootersTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -631,7 +783,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 308625270A8D872EDEFC8CCA /* Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig */;
+			baseConfigurationReference = AA528CF851F4D9C4AEB9F865 /* Pods-OrenjiScooters-OrenjiScootersTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -651,7 +803,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 63B115EE3D1FEC197102519E /* Pods-OrenjiScooters.debug.xcconfig */;
+			baseConfigurationReference = D4090607F1248E90AEE9E873 /* Pods-OrenjiScooters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -674,7 +826,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24836A3D763381335633793C /* Pods-OrenjiScooters.release.xcconfig */;
+			baseConfigurationReference = F05BCE4E37953D410BB6F3CE /* Pods-OrenjiScooters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -695,7 +847,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDD542AC2AB99F062B803CD5 /* Pods-OrenjiScooters-tvOS.debug.xcconfig */;
+			baseConfigurationReference = D8009EA5302DA7A15CAEB1C7 /* Pods-OrenjiScooters-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -723,7 +875,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38E3771AAE10C6BEC5937464 /* Pods-OrenjiScooters-tvOS.release.xcconfig */;
+			baseConfigurationReference = DC95D44B0A7633806FA84534 /* Pods-OrenjiScooters-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -751,7 +903,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED33B51432B8EC32DD8ED56F /* Pods-OrenjiScooters-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 8632A3620B4D6B2D7A5ED728 /* Pods-OrenjiScooters-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -778,7 +930,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C711BBE6ED2A8C79F2605CB /* Pods-OrenjiScooters-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = 644786D9BFB070B518836E2A /* Pods-OrenjiScooters-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
