@@ -7,7 +7,7 @@
 import React from 'react';
 import {View, Image} from 'react-native';
 import {Banner} from 'react-native-paper';
-import {IScooterGeo} from '../api/models/Scooter';
+import {IScooterGeo, ScooterStatus} from '../api/models/Scooter';
 
 type VehicleBannerProps = {
     visible: boolean;
@@ -15,8 +15,16 @@ type VehicleBannerProps = {
     onClose: () => void;
 };
 
+function getStatusLabel(status: keyof typeof ScooterStatus | null) {
+    if (status !== null) {
+        return ScooterStatus[status];
+    }
+
+    return '';
+}
+
 const VehicleBanner: React.FC<VehicleBannerProps> = ({visible, vehicle, onClose}) => {
-    const status = vehicle === null ? '' : vehicle.properties.status;
+    const status = vehicle === null ? null : vehicle.properties.status;
 
     return (
         <View>
@@ -39,7 +47,7 @@ const VehicleBanner: React.FC<VehicleBannerProps> = ({visible, vehicle, onClose}
                         }}
                     />
                 )}>
-                Status: {status}
+                Status: {getStatusLabel(status)}
             </Banner>
         </View>
     );

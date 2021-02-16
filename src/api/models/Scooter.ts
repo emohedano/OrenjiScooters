@@ -4,12 +4,15 @@ enum ScooterTypes {
     REGULAR,
 }
 
-// TODO: user an enum
-type ScooterStatus = 'available' | 'not_available' | 'rented';
+export enum ScooterStatus {
+    available = 'Available',
+    not_available = 'Not Available',
+    rented = 'Rented',
+}
 
 class ScooterProperties {
     type? = ScooterTypes.REGULAR;
-    status: ScooterStatus = 'available';
+    status: keyof typeof ScooterStatus = 'available';
     icon = 'bicycle-15';
 }
 

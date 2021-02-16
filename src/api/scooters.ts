@@ -6,7 +6,7 @@ export default class ScootersApi extends BaseApi {
         const vehiclesCollection = await this.makeRequest<IScooterGeoCollection>('/vehicles');
 
         vehiclesCollection.features.forEach((feature) => {
-            feature.properties.icon = 'bicycle-15';
+            feature.properties.icon = feature.properties.status;
         });
 
         return vehiclesCollection;

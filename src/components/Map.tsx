@@ -8,6 +8,9 @@ import React from 'react';
 import {StyleSheet, View, Dimensions} from 'react-native';
 import MapboxGL from '@react-native-mapbox-gl/maps';
 import {IScooterGeo, IScooterGeoCollection} from '../api/models/Scooter';
+import availableIcon from '../images/available.png';
+import notAvailableeIcon from '../images/not_available.png';
+import rentedIcon from '../images/rented.png';
 
 const MAPBOX_TOKEN = Config.MAPBOX_TOKEN;
 const MAPBOX_STYLE_URL = Config.MAPBOX_STYLE_URL;
@@ -56,14 +59,22 @@ const Map: React.FC<MapProps> = ({vehicleCollection, onPressVehicle}) => {
                     compassEnabled={true}>
                     <MapboxGL.Camera followUserLocation />
 
+                    <MapboxGL.Images
+                        images={{
+                            rented: rentedIcon,
+                            available: availableIcon,
+                            not_available: notAvailableeIcon,
+                        }}
+                    />
+
                     <MapboxGL.UserLocation />
 
                     <MapboxGL.ShapeSource
-                        id="exampleShapeSource"
+                        id="vehicleShapeSource"
                         shape={vehicleCollection}
                         onPress={handleMapShapePress}>
                         <MapboxGL.SymbolLayer
-                            id="exampleIconName"
+                            id="vehicleIconName"
                             style={shapeStyles.icon as MapboxGL.SymbolLayerStyle}
                         />
                     </MapboxGL.ShapeSource>
