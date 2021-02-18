@@ -9,8 +9,13 @@ import {Appbar} from 'react-native-paper';
 
 function Header() {
     return (
-        <Appbar.Header>
-            <Appbar.Content title="オレンジ" subtitle="Scooters" />
+        <Appbar.Header accessibilityTraits="header" accessibilityComponentType="header">
+            <Appbar.Content
+                title="オレンジ"
+                subtitle="Scooters"
+                accessibilityTraits="header"
+                accessibilityComponentType="header"
+            />
         </Appbar.Header>
     );
 }

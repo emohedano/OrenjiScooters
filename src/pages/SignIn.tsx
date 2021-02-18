@@ -34,20 +34,32 @@ const SignIn: React.FC<SignInProps> = ({navigation}) => (
         <Header />
 
         <View style={styles.form}>
-            <Avatar.Image source={logoImage} style={styles.logo} />
+            <Avatar.Image
+                source={logoImage}
+                style={styles.logo}
+                accessibilityTraits="image"
+                accessibilityComponentType="image"
+            />
             <Headline style={styles.logo}>オレンジ</Headline>
         </View>
 
         <View style={styles.form}>
-            <TextInput mode="flat" label="username" />
-            <TextInput label="password" secureTextEntry={true} />
+            <TextInput mode="flat" label="username" accessibilityTraits="none" accessibilityComponentType="none" />
+            <TextInput
+                label="password"
+                secureTextEntry={true}
+                accessibilityTraits="none"
+                accessibilityComponentType="none"
+            />
         </View>
 
         <Button
             mode="contained"
             onPress={() => {
                 navigation.navigate('Main');
-            }}>
+            }}
+            accessibilityTraits="none"
+            accessibilityComponentType="none">
             Log in
         </Button>
     </View>

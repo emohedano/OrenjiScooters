@@ -40,6 +40,13 @@ function getStatusLabel(status: keyof typeof ScooterStatus | null) {
 const VehicleBanner: React.FC<VehicleBannerProps> = ({visible, vehicle, onClose}) => {
     const status = vehicle === null ? null : vehicle.properties.status;
 
+    const bannerContent = ((
+        <Text style={styles.statusLabel}>
+            Status:
+            <Text style={styles.statusValue}>{getStatusLabel(status)}</Text>
+        </Text>
+    ) as unknown) as string;
+
     return (
         <Banner
             visible={visible}
@@ -58,10 +65,10 @@ const VehicleBanner: React.FC<VehicleBannerProps> = ({visible, vehicle, onClose}
                         height: size * 2,
                     }}
                 />
-            )}>
-            <Text style={styles.statusLabel}>
-                Status: <Text style={styles.statusValue}>{getStatusLabel(status)}</Text>
-            </Text>
+            )}
+            accessibilityTraits="button"
+            accessibilityComponentType="button">
+            {bannerContent}
         </Banner>
     );
 };

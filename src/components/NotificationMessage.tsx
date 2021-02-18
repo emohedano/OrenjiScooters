@@ -21,7 +21,9 @@ const NotificationMessage: React.FC<NotificationMessageProps> = ({visible, messa
             action={{
                 label: 'Retry',
                 onPress: onClose,
-            }}>
+            }}
+            accessibilityTraits="button"
+            accessibilityComponentType="button">
             {message}
         </Snackbar>
     );
