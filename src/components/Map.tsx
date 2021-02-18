@@ -52,7 +52,6 @@ const Map: React.FC<MapProps> = ({token, stylesUrl = '', vehicleCollection, cent
 
     function handleMapShapePress(event: any) {
         // If shape pressed is a vehicle, it will be available in the features[0] property
-
         if (event.features && event.features[0]) {
             onPressVehicle(event.features[0]);
         }
@@ -62,6 +61,7 @@ const Map: React.FC<MapProps> = ({token, stylesUrl = '', vehicleCollection, cent
         MapboxGL.setAccessToken(token);
         MapboxGL.setTelemetryEnabled(false);
 
+        // Adjust screen dimensions when device rotates
         Dimensions.addEventListener('change', () => {
             setDimensions(getScreenDimensions());
         });

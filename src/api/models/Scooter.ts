@@ -1,9 +1,5 @@
 import {Geometry} from 'geojson';
 
-enum ScooterTypes {
-    REGULAR,
-}
-
 export enum ScooterStatus {
     available = 'Available',
     not_available = 'Not Available',
@@ -11,9 +7,8 @@ export enum ScooterStatus {
 }
 
 class ScooterProperties {
-    type? = ScooterTypes.REGULAR;
     status: keyof typeof ScooterStatus = 'available';
-    icon = 'bicycle-15';
+    icon: keyof typeof ScooterStatus = 'available'; // Used status as icon name
 }
 
 export interface IScooterGeo extends GeoJSON.Feature<Geometry, ScooterProperties> {}
