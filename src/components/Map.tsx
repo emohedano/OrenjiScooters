@@ -3,21 +3,16 @@
  *
  * @format
  */
-import Config from 'react-native-config';
 import React from 'react';
-import {StyleSheet, View, Dimensions} from 'react-native';
-import MapboxGL from '@react-native-mapbox-gl/maps';
+import {StyleSheet, View, Dimensions, Text} from 'react-native';
+import MapboxGL, {SymbolLayerStyle} from '@react-native-mapbox-gl/maps';
 import {IScooterGeo, IScooterGeoCollection} from '../api/models/Scooter';
 import availableIcon from '../images/available.png';
 import notAvailableeIcon from '../images/not_available.png';
 import rentedIcon from '../images/rented.png';
 import {Position} from 'geojson';
 
-const MAPBOX_TOKEN = Config.MAPBOX_TOKEN;
-const MAPBOX_STYLE_URL = Config.MAPBOX_STYLE_URL;
 const DEFAULT_ZOOM_LEVEL = 15;
-
-MapboxGL.setAccessToken(MAPBOX_TOKEN);
 
 const shapeStyles = {
     icon: {
@@ -38,6 +33,8 @@ const styles = StyleSheet.create({
 });
 
 type MapProps = {
+    token: string;
+    stylesUrl?: string;
     vehicleCollection: IScooterGeoCollection | null;
     centerCoordinate: Position;
     onPressVehicle: (vehicle: IScooterGeo) => void;
@@ -50,7 +47,7 @@ function getScreenDimensions() {
     };
 }
 
-const Map: React.FC<MapProps> = ({vehicleCollection, centerCoordinate, onPressVehicle}) => {
+const Map: React.FC<MapProps> = ({token, stylesUrl = '', vehicleCollection, centerCoordinate, onPressVehicle}) => {
     const [dimensions, setDimensions] = React.useState(getScreenDimensions());
 
     function handleMapShapePress(event: any) {
@@ -62,6 +59,7 @@ const Map: React.FC<MapProps> = ({vehicleCollection, centerCoordinate, onPressVe
     }
 
     React.useEffect(() => {
+        MapboxGL.setAccessToken(token);
         MapboxGL.setTelemetryEnabled(false);
 
         Dimensions.addEventListener('change', () => {
@@ -69,11 +67,19 @@ const Map: React.FC<MapProps> = ({vehicleCollection, centerCoordinate, onPressVe
         });
     }, []);
 
+    if (!token) {
+        return (
+            <View style={styles.page}>
+                <Text>Unable to display map</Text>
+            </View>
+        );
+    }
+
     return (
         <View style={styles.page}>
             <View style={{...dimensions}}>
                 <MapboxGL.MapView
-                    styleURL={MAPBOX_STYLE_URL}
+                    styleURL={stylesUrl}
                     style={styles.map}
                     logoEnabled={false}
                     zoomEnabled
@@ -95,10 +101,7 @@ const Map: React.FC<MapProps> = ({vehicleCollection, centerCoordinate, onPressVe
                             id="vehicleShapeSource"
                             shape={vehicleCollection}
                             onPress={handleMapShapePress}>
-                            <MapboxGL.SymbolLayer
-                                id="vehicleIconName"
-                                style={shapeStyles.icon as MapboxGL.SymbolLayerStyle}
-                            />
+                            <MapboxGL.SymbolLayer id="vehicleIconName" style={shapeStyles.icon as SymbolLayerStyle} />
                         </MapboxGL.ShapeSource>
                     ) : null}
                 </MapboxGL.MapView>

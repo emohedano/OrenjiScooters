@@ -6,8 +6,9 @@
 
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-
 import {Button} from 'react-native-paper';
+import Config from 'react-native-config';
+
 import VehicleBanner from '../components/VehicleBanner';
 import Map from '../components/Map';
 import NotificationMessage from '../components/NotificationMessage';
@@ -17,6 +18,8 @@ import {scootersApi} from '../api';
 import {ApiException} from '../api/exceptions';
 
 const MAP_CENTER_COORDINATE = [-122.41618259887457, 37.76098139438089];
+const MAPBOX_TOKEN = Config.MAPBOX_TOKEN;
+const MAPBOX_STYLE_URL = Config.MAPBOX_STYLE_URL;
 
 const styles = StyleSheet.create({
     container: {
@@ -55,6 +58,11 @@ const Main: React.FC<MainProps> = ({navigation}) => {
         navigation.navigate('SignIn');
     }
 
+    function handleMapError(error: string) {
+        setErrorMessage(error);
+        setErrorVisible(true);
+    }
+
     function getScooters() {
         scootersApi
             .getAll()
@@ -68,12 +76,20 @@ const Main: React.FC<MainProps> = ({navigation}) => {
     }
 
     React.useEffect(() => {
+        if (!MAPBOX_TOKEN) {
+            setErrorMessage('Mapbox token not found');
+            setErrorVisible(true);
+            return;
+        }
+
         getScooters();
     }, []);
 
     return (
         <View style={styles.container}>
             <Map
+                token={MAPBOX_TOKEN}
+                stylesUrl={MAPBOX_STYLE_URL}
                 vehicleCollection={vehicleCollection}
                 centerCoordinate={MAP_CENTER_COORDINATE}
                 onPressVehicle={handleVehiclePress}></Map>
@@ -88,7 +104,11 @@ const Main: React.FC<MainProps> = ({navigation}) => {
                 message={errorMessage}
                 onClose={handleNotificationClose}></NotificationMessage>
 
-            <Button mode="contained" onPress={handleLogoutPress}>
+            <Button
+                mode="contained"
+                onPress={handleLogoutPress}
+                accessibilityTraits="button"
+                accessibilityComponentType="button">
                 Log out
             </Button>
         </View>
