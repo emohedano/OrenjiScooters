@@ -1,5 +1,5 @@
-import BaseApi from '../../src/api/base';
-import {ApiException} from '../../src/api/exceptions';
+import BaseApi from '../base';
+import {ApiException} from '../exceptions';
 
 describe('api', () => {
     describe('base', () => {

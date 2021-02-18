@@ -1,10 +1,11 @@
-import {scootersApi} from '../../src/api';
-import {ApiException} from '../../src/api/exceptions';
+import ScootersApi from '../scooters';
+import {ApiException} from '../exceptions';
 
 describe('api', () => {
     describe('scooters', () => {
         it('should fetch a collection of IScooterGeoCollection', async () => {
             // Given
+            const scootersApi = new ScootersApi();
             const makeRequestMock = jest.spyOn(scootersApi, 'makeRequest').mockImplementation(async () => {
                 return {
                     type: 'FeatureCollection',
@@ -35,6 +36,7 @@ describe('api', () => {
 
         it('should throw an ApiException if the request fails', async () => {
             // Given
+            const scootersApi = new ScootersApi();
             const makeRequestMock = jest.spyOn(scootersApi, 'makeRequest').mockImplementation(async () => {
                 throw new ApiException('Any error');
             });
