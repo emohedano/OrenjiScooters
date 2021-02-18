@@ -94,10 +94,11 @@ const Main: React.FC<MainProps> = ({navigation}) => {
                 centerCoordinate={MAP_CENTER_COORDINATE}
                 onPressVehicle={handleVehiclePress}></Map>
 
-            <VehicleBanner
-                vehicle={selectedVehicle}
-                visible={selectedVisible}
-                onClose={handleVehicleBannerClose}></VehicleBanner>
+
+            {selectedVehicle && <VehicleBanner
+                vehicle={selectedVehicle?.properties}
+                visible={true}
+                onClose={handleVehicleBannerClose}></VehicleBanner>}
 
             <NotificationMessage
                 visible={errorVisible}

@@ -7,7 +7,7 @@
 import React from 'react';
 import {Image, Text, StyleSheet} from 'react-native';
 import {Banner} from 'react-native-paper';
-import {IScooterGeo, ScooterStatus} from '../api/models/Scooter';
+import {Scooter, ScooterStatus} from '../api/models/Scooter';
 import scooterImage from '../images/orange_scooter.png';
 
 const styles = StyleSheet.create({
@@ -19,31 +19,24 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     statusValue: {
-        fontWeight: 'bold',
+        fontWeight: 'bold'
     },
 });
 
 type VehicleBannerProps = {
     visible: boolean;
-    vehicle: IScooterGeo | null;
+    vehicle: Scooter | null;
     onClose: () => void;
 };
 
-function getStatusLabel(status: keyof typeof ScooterStatus | null) {
-    if (status !== null) {
-        return ScooterStatus[status];
-    }
-
-    return '';
-}
-
 const VehicleBanner: React.FC<VehicleBannerProps> = ({visible, vehicle, onClose}) => {
-    const status = vehicle === null ? null : vehicle.properties.status;
+    const status = vehicle === null ? '' : ` ${ScooterStatus[vehicle.status]}`;
 
+    // Since the Banner component only accepts text we neet to trick TS to accept it
     const bannerContent = ((
         <Text style={styles.statusLabel}>
             Status:
-            <Text style={styles.statusValue}>{getStatusLabel(status)}</Text>
+            <Text testID="vehicle-banner__status-value" style={styles.statusValue}>{status}</Text>
         </Text>
     ) as unknown) as string;
 

@@ -6,11 +6,18 @@ export enum ScooterStatus {
     rented = 'Rented',
 }
 
-class ScooterProperties {
-    status: keyof typeof ScooterStatus = 'available';
-    icon: keyof typeof ScooterStatus = 'available'; // Used status as icon name
+type ScooterStatusString = keyof typeof ScooterStatus;
+
+export class Scooter {
+    status: ScooterStatusString = 'available';
+    icon: ScooterStatusString = 'available'; // Used status as icon name
+
+    constructor(status: ScooterStatusString) {
+        this.status = status;
+        this.icon = status;
+    }
 }
 
-export interface IScooterGeo extends GeoJSON.Feature<Geometry, ScooterProperties> {}
+export interface IScooterGeo extends GeoJSON.Feature<Geometry, Scooter> {}
 
-export interface IScooterGeoCollection extends GeoJSON.FeatureCollection<Geometry, ScooterProperties> {}
+export interface IScooterGeoCollection extends GeoJSON.FeatureCollection<Geometry, Scooter> {}
