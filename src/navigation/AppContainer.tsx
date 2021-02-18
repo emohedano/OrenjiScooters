@@ -15,7 +15,7 @@ const Stack = createStackNavigator<RootStackParamList>();
 const AppContainer = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName="SignIn">
+            <Stack.Navigator initialRouteName="SignIn" headerMode="none">
                 <Stack.Screen name="SignIn" component={SignIn} />
                 <Stack.Screen name="Main" component={Main} />
             </Stack.Navigator>

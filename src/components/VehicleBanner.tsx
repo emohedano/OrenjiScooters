@@ -5,9 +5,23 @@
  */
 
 import React from 'react';
-import {View, Image} from 'react-native';
+import {Image, Text, StyleSheet} from 'react-native';
 import {Banner} from 'react-native-paper';
 import {IScooterGeo, ScooterStatus} from '../api/models/Scooter';
+import scooterImage from '../images/orange_scooter.png';
+
+const styles = StyleSheet.create({
+    image: {
+        borderRadius: 10,
+        backgroundColor: 'white',
+    },
+    statusLabel: {
+        fontSize: 18,
+    },
+    statusValue: {
+        fontWeight: 'bold',
+    },
+});
 
 type VehicleBannerProps = {
     visible: boolean;
@@ -27,29 +41,28 @@ const VehicleBanner: React.FC<VehicleBannerProps> = ({visible, vehicle, onClose}
     const status = vehicle === null ? null : vehicle.properties.status;
 
     return (
-        <View>
-            <Banner
-                visible={visible}
-                actions={[
-                    {
-                        label: 'Close',
-                        onPress: onClose,
-                    },
-                ]}
-                icon={({size}) => (
-                    <Image
-                        source={{
-                            uri: 'https://www.proskatersplace.com/wp-content/uploads/2020/02/Havoc-Mini-Orange.jpg',
-                        }}
-                        style={{
-                            width: size,
-                            height: size,
-                        }}
-                    />
-                )}>
-                Status: {getStatusLabel(status)}
-            </Banner>
-        </View>
+        <Banner
+            visible={visible}
+            actions={[
+                {
+                    label: 'Close',
+                    onPress: onClose,
+                },
+            ]}
+            icon={({size}) => (
+                <Image
+                    source={scooterImage}
+                    style={{
+                        ...styles.image,
+                        width: size * 2,
+                        height: size * 2,
+                    }}
+                />
+            )}>
+            <Text style={styles.statusLabel}>
+                Status: <Text style={styles.statusValue}>{getStatusLabel(status)}</Text>
+            </Text>
+        </Banner>
     );
 };
 

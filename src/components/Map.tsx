@@ -11,14 +11,35 @@ import {IScooterGeo, IScooterGeoCollection} from '../api/models/Scooter';
 import availableIcon from '../images/available.png';
 import notAvailableeIcon from '../images/not_available.png';
 import rentedIcon from '../images/rented.png';
+import {Position} from 'geojson';
 
 const MAPBOX_TOKEN = Config.MAPBOX_TOKEN;
 const MAPBOX_STYLE_URL = Config.MAPBOX_STYLE_URL;
+const DEFAULT_ZOOM_LEVEL = 15;
 
 MapboxGL.setAccessToken(MAPBOX_TOKEN);
 
+const shapeStyles = {
+    icon: {
+        iconImage: ['get', 'icon'],
+        iconSize: 2,
+    },
+};
+
+const styles = StyleSheet.create({
+    page: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    map: {
+        flex: 1,
+    },
+});
+
 type MapProps = {
-    vehicleCollection: IScooterGeoCollection;
+    vehicleCollection: IScooterGeoCollection | null;
+    centerCoordinate: Position;
     onPressVehicle: (vehicle: IScooterGeo) => void;
 };
 
@@ -29,7 +50,7 @@ function getScreenDimensions() {
     };
 }
 
-const Map: React.FC<MapProps> = ({vehicleCollection, onPressVehicle}) => {
+const Map: React.FC<MapProps> = ({vehicleCollection, centerCoordinate, onPressVehicle}) => {
     const [dimensions, setDimensions] = React.useState(getScreenDimensions());
 
     function handleMapShapePress(event: any) {
@@ -50,14 +71,14 @@ const Map: React.FC<MapProps> = ({vehicleCollection, onPressVehicle}) => {
 
     return (
         <View style={styles.page}>
-            <View style={{...styles.container, ...dimensions}}>
+            <View style={{...dimensions}}>
                 <MapboxGL.MapView
                     styleURL={MAPBOX_STYLE_URL}
                     style={styles.map}
                     logoEnabled={false}
                     zoomEnabled
                     compassEnabled={true}>
-                    <MapboxGL.Camera followUserLocation />
+                    <MapboxGL.Camera centerCoordinate={centerCoordinate} zoomLevel={DEFAULT_ZOOM_LEVEL} />
 
                     <MapboxGL.Images
                         images={{
@@ -69,41 +90,21 @@ const Map: React.FC<MapProps> = ({vehicleCollection, onPressVehicle}) => {
 
                     <MapboxGL.UserLocation />
 
-                    <MapboxGL.ShapeSource
-                        id="vehicleShapeSource"
-                        shape={vehicleCollection}
-                        onPress={handleMapShapePress}>
-                        <MapboxGL.SymbolLayer
-                            id="vehicleIconName"
-                            style={shapeStyles.icon as MapboxGL.SymbolLayerStyle}
-                        />
-                    </MapboxGL.ShapeSource>
+                    {vehicleCollection ? (
+                        <MapboxGL.ShapeSource
+                            id="vehicleShapeSource"
+                            shape={vehicleCollection}
+                            onPress={handleMapShapePress}>
+                            <MapboxGL.SymbolLayer
+                                id="vehicleIconName"
+                                style={shapeStyles.icon as MapboxGL.SymbolLayerStyle}
+                            />
+                        </MapboxGL.ShapeSource>
+                    ) : null}
                 </MapboxGL.MapView>
             </View>
         </View>
     );
 };
-
-const shapeStyles = {
-    icon: {
-        iconImage: ['get', 'icon'],
-        iconSize: 2,
-    },
-};
-
-const styles = StyleSheet.create({
-    page: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    container: {
-        backgroundColor: 'white',
-    },
-    map: {
-        flex: 1,
-    },
-});
 
 export default Map;

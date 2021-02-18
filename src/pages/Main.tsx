@@ -16,6 +16,8 @@ import {ScreenNavigationProp} from '../types';
 import {scootersApi} from '../api';
 import {ApiException} from '../api/exceptions';
 
+const MAP_CENTER_COORDINATE = [-122.41618259887457, 37.76098139438089];
+
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -46,13 +48,14 @@ const Main: React.FC<MainProps> = ({navigation}) => {
 
     function handleNotificationClose() {
         setErrorVisible(false);
+        getScooters();
     }
 
     function handleLogoutPress() {
         navigation.navigate('SignIn');
     }
 
-    React.useEffect(() => {
+    function getScooters() {
         scootersApi
             .getAll()
             .then((scooters) => {
@@ -62,13 +65,18 @@ const Main: React.FC<MainProps> = ({navigation}) => {
                 setErrorMessage(error.message);
                 setErrorVisible(true);
             });
+    }
+
+    React.useEffect(() => {
+        getScooters();
     }, []);
 
     return (
         <View style={styles.container}>
-            {vehicleCollection ? (
-                <Map vehicleCollection={vehicleCollection} onPressVehicle={handleVehiclePress}></Map>
-            ) : null}
+            <Map
+                vehicleCollection={vehicleCollection}
+                centerCoordinate={MAP_CENTER_COORDINATE}
+                onPressVehicle={handleVehiclePress}></Map>
 
             <VehicleBanner
                 vehicle={selectedVehicle}
