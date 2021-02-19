@@ -1,16 +1,27 @@
 # オレンジ Scooters
 
-A React Native application that displays set of vehicles in a Mapbox view.
+A React Native application that displays a set of vehicles in a Mapbox view.
 
 ## Features
 
-- Navigation
-    - login opens map
-- Displays vehicles
-- Detail of vehicles
-- Error handling
-    - Network error
-    - Token error
+- **Login:** Initial page includes a login page for future implementation of user session support
+    <br/><img width="200" src="./screenshots/orenji_start.gif" alt="Start up to Login"/>
+- **Navigation:** Sreen navigation is supported for future addition of pages
+    <br/><img width="200" src="./screenshots/orenji_login.gif" alt="Login to Map"/>
+- **Display vehicles:** Vehicles are loaded from REST API in Map (in GeoJSON format)
+    <br/><img width="200" src="./screenshots/orenji_select.gif" alt="Select Vehicle"/>
+- **Vehicle Detail:** Vehicle metadata is displayed on vehicle selection
+    - **Vehicle image:** 
+        <br/><img width="100" src="./src/images/orange_scooter.png" alt="Vehicle image"/>
+    - **Vehicles status:**
+        - ![Available](./src/images/available.png) Available
+        - ![Rented](./src/images/rented.png) Rented
+        - ![Not Available](./src/images/not_available.png) Not Available
+- **Error handling:** Main view handles errors through notification messages
+    - **Network error:** Notification is displayed with "Retry" option
+    <br/><img width="100" src="./screenshots/orenji_network_error.gif" alt="Network Error"/>
+    - **Token error:** Label displaying Map was not able to load 
+    <br/><img width="100" src="./screenshots/orenji_token_error.gif" alt="Token Error"/>
 
 
 ## Installation (ios only)
@@ -28,28 +39,29 @@ A React Native application that displays set of vehicles in a Mapbox view.
     npm install
     cd ios && pod install
     ```
-4. Start Metro server:
+4. Setup and `.env` file (rename `sample.env`)
+    - `BASE_URL`: Base URI from vehicles GeoJSON endpoint
+    - `MAPBOX_TOKEN`: Mapbox Access Token
+    - `MAPBOX_STYLE_URL`: URL from map style (private or public)
+
+5. Start Metro server:
 
     ```
     npm run start
     ```
-5. Build the app:
+6. Build the app:
 
     ```
     npm run ios
     ```
-6. Application should be running in virtual device
+7. Application should be running in virtual device
+
+
 
 ## Additional Libraries
-- **react-navigation**
-
-    Used to simplify navigation across screens
-- **react-native-config**
-    
-    Used to store private information in a `.env` file outside the repository
-- **react-native-paper**
-    
-    Used to provide consistent UI components
-- **react-native-paper**
-    
-    Used to provide consistent UI components
+- [**react-navigation**](https://reactnavigation.org/)
+    - Used to simplify navigation across screens
+- [**react-native-config**](https://github.com/luggit/react-native-config)
+    - Used to store private information in a `.env` file outside the repository
+- [**react-native-paper**]()
+    - Used to provide consistent UI components
