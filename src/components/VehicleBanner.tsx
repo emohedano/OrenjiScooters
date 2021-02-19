@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
         fontSize: 18,
     },
     statusValue: {
-        fontWeight: 'bold'
+        fontWeight: 'bold',
     },
 });
 
@@ -36,7 +36,9 @@ const VehicleBanner: React.FC<VehicleBannerProps> = ({visible, vehicle, onClose}
     const bannerContent = ((
         <Text style={styles.statusLabel}>
             Status:
-            <Text testID="vehicle-banner__status-value" style={styles.statusValue}>{status}</Text>
+            <Text testID="vehicle-banner__status-value" style={styles.statusValue}>
+                {status}
+            </Text>
         </Text>
     ) as unknown) as string;
 
