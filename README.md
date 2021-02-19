@@ -57,15 +57,22 @@ A React Native application that displays a set of vehicles in a Mapbox view.
     ```
 7. Application should be running in virtual device
 
+## Tests
 
+Tu run the unit test simply run the following commands:
+
+```
+cd OrenjiScooters
+npm run tests
+```
 
 ## Folder structure
 
 - **src:** Source code folder
     - **api:** Necessary resources for external API connection
-        - **__tests__:** Tests folder
         - **models:** Data models definitions
     - **components:** Reusable components definitions
+    - **services:** Shared services of the application
     - **images:** App image resources
     - **navigation:** Navigation routing definition
     - **pages:** App Pages definition
@@ -81,3 +88,5 @@ A React Native application that displays a set of vehicles in a Mapbox view.
     - Used to store private information in a `.env` file outside the repository
 - [**react-native-paper**](https://callstack.github.io/react-native-paper/)
     - Used to provide consistent UI components
+- [**@testing-library/react-native**](https://github.com/callstack/react-native-testing-library/)
+    - Used to provide simplify testing of React components
