@@ -7,7 +7,6 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import {Button} from 'react-native-paper';
-import Config from 'react-native-config';
 
 import VehicleBanner from '../components/VehicleBanner';
 import Map from '../components/Map';
@@ -15,11 +14,7 @@ import NotificationMessage from '../components/NotificationMessage';
 import {IScooterGeo, IScooterGeoCollection} from '../api/models/Scooter';
 import {ScreenNavigationProp} from '../types';
 import {scootersApi} from '../api';
-import {ApiException} from '../api/exceptions';
-
-const MAP_CENTER_COORDINATE = [-122.41618259887457, 37.76098139438089];
-const MAPBOX_TOKEN = Config.MAPBOX_TOKEN;
-const MAPBOX_STYLE_URL = Config.MAPBOX_STYLE_URL;
+import ConfigManager from '../services/ConfigManager';
 
 const styles = StyleSheet.create({
     container: {
@@ -33,20 +28,21 @@ type MainProps = {
 };
 
 const Main: React.FC<MainProps> = ({navigation}) => {
+    const MAP_CENTER_COORDINATE = ConfigManager.getConfigValue('MAP_CENTER_COORDINATE') as any;
+    const MAPBOX_TOKEN = ConfigManager.getConfigValue('MAPBOX_TOKEN') as any;
+    const MAPBOX_STYLE_URL = ConfigManager.getConfigValue('MAPBOX_STYLE_URL') as any;
+
     const [errorVisible, setErrorVisible] = React.useState(false);
     const [errorMessage, setErrorMessage] = React.useState('');
-    const [selectedVisible, setSelectedVisible] = React.useState(false);
     const [selectedVehicle, setSelectedVehicle] = React.useState<IScooterGeo | null>(null);
     const [vehicleCollection, setVehicleCollection] = React.useState<IScooterGeoCollection | null>(null);
 
     function handleVehiclePress(vehicle: IScooterGeo) {
         setSelectedVehicle(vehicle);
-        setSelectedVisible(true);
     }
 
     function handleVehicleBannerClose() {
         setSelectedVehicle(null);
-        setSelectedVisible(false);
     }
 
     function handleNotificationClose() {
@@ -58,21 +54,14 @@ const Main: React.FC<MainProps> = ({navigation}) => {
         navigation.navigate('SignIn');
     }
 
-    function handleMapError(error: string) {
-        setErrorMessage(error);
-        setErrorVisible(true);
-    }
-
-    function getScooters() {
-        scootersApi
-            .getAll()
-            .then((scooters) => {
-                setVehicleCollection(scooters);
-            })
-            .catch((error: ApiException) => {
-                setErrorMessage(error.message);
-                setErrorVisible(true);
-            });
+    async function getScooters() {
+        try {
+            const scooters = await scootersApi.getAll();
+            setVehicleCollection(scooters);
+        } catch (error) {
+            setErrorMessage(error.message);
+            setErrorVisible(true);
+        }
     }
 
     React.useEffect(() => {
@@ -94,11 +83,12 @@ const Main: React.FC<MainProps> = ({navigation}) => {
                 centerCoordinate={MAP_CENTER_COORDINATE}
                 onPressVehicle={handleVehiclePress}></Map>
 
-
-            {selectedVehicle && <VehicleBanner
-                vehicle={selectedVehicle?.properties}
-                visible={true}
-                onClose={handleVehicleBannerClose}></VehicleBanner>}
+            {selectedVehicle && (
+                <VehicleBanner
+                    vehicle={selectedVehicle?.properties}
+                    visible={true}
+                    onClose={handleVehicleBannerClose}></VehicleBanner>
+            )}
 
             <NotificationMessage
                 visible={errorVisible}
