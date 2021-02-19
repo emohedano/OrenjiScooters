@@ -8,6 +8,7 @@ A React Native application that displays a set of vehicles in a Mapbox view.
     <br/><img width="200" src="./screenshots/orenji_start.gif" alt="Start up to Login"/>
 - **Navigation:** Sreen navigation is supported for future addition of pages
     <br/><img width="200" src="./screenshots/orenji_login.gif" alt="Login to Map"/>
+    <img width="200" src="./screenshots/orenji_logout.gif" alt="Logout from Map"/>
 - **Display vehicles:** Vehicles are loaded from REST API in Map (in GeoJSON format)
     <br/><img width="200" src="./screenshots/orenji_select.gif" alt="Select Vehicle"/>
 - **Vehicle Detail:** Vehicle metadata is displayed on vehicle selection
@@ -58,10 +59,25 @@ A React Native application that displays a set of vehicles in a Mapbox view.
 
 
 
+## Folder structure
+
+- **src:** Source code folder
+    - **api:** Necessary resources for external API connection
+        - **__tests__:** Tests folder
+        - **models:** Data models definitions
+    - **components:** Reusable components definitions
+    - **images:** App image resources
+    - **navigation:** Navigation routing definition
+    - **pages:** App Pages definition
+    - **types:** Global types used in the App
+- **screenshots:** Gifs containing screen interactions
+- **sample.env:** File containing a placeholder for the environment variables needed 
+
+
 ## Additional Libraries
 - [**react-navigation**](https://reactnavigation.org/)
     - Used to simplify navigation across screens
 - [**react-native-config**](https://github.com/luggit/react-native-config)
     - Used to store private information in a `.env` file outside the repository
-- [**react-native-paper**]()
+- [**react-native-paper**](https://callstack.github.io/react-native-paper/)
     - Used to provide consistent UI components
